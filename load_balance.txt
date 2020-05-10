@@ -1,0 +1,11 @@
+table_add MyIngress.ecmp_group set_ecmp_select 10.0.0.100/32 => 0 2
+table_add MyIngress.ecmp_group set_ecmp_select 10.0.0.2/32 => 0 1
+table_add MyIngress.ecmp_group set_ecmp_select 10.0.0.3/32 => 0 1
+
+#table_add MyEgress.send_frame rewrite_ip 3 => 10.0.0.1
+#table_add MyEgress.send_frame rewrite_ip 2 => 10.0.0.1
+
+table_add MyIngress.ecmp_nhop set_nhop 0 => 00:00:00:00:00:02 10.0.0.100 2
+table_add MyIngress.ecmp_nhop set_nhop 1 => 00:00:00:00:00:03 10.0.0.100 3
+
+#table_add MyIngress.ip_forward ipv4_forward 10.0.0.1 => 00:00:00:00:00:01 1
