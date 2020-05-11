@@ -50,12 +50,6 @@ def handle_pkt(pkt):
                     phys = subprocess.check_output(cmd, shell=True)
                     print(cmd)
 
-    # simple_switch_CLI --thrift-port 50001 <<< "table_modify MyIngress.ipv4_lpm ipv4_forward 1 00:00:00:00:00:02 2"
-    # ap2 simple_switch_CLI --thrift-port 50002 <<< "table_add MyIngress.ipv4_lpm ipv4_forward 10.0.0.1 => 00:00:00:00:00:01 1"
-    # ap2 simple_switch_CLI --thrift-port 50002 <<< "table_add MyIngress.ipv4_lpm ipv4_forward 10.0.0.2 => 00:00:00:00:00:02 2"
-    # s1 simple_switch_CLI --thrift-port 50003 <<< "table_add MyIngress.ipv4_lpm ipv4_forward 10.0.0.2 => 00:00:00:00:00:02 3"
-    # s1 simple_switch_CLI --thrift-port 50003 <<< "table_add MyIngress.ipv4_lpm ipv4_forward 10.0.0.1 => 00:00:00:00:00:01 2"
-
 
 def main():
     iface = sys.argv[1]
