@@ -1,20 +1,19 @@
 ## P4 Scenarios
 
-You will find in this repository a set of P4 scenarios organized in Jupyter notebooks.   
+This repository contains a collection of P4 scenarios designed to run with Mininet-WiFi, enabling the emulation and testing of P4-based networks in a wireless environment.
 
-Scenarios currently available include:    
 
-- firewall
-- handover  
-- ip_routing
-- load_balance
-- simple
-- two aps
+## Available Scenarios    
 
+The following scenarios are currently supported:
+
+- simple – A minimal P4 network setup for testing basic functionalities.
+- two aps – A scenario with two access points and stations to test connectivity.
+- ip_routing – Implements basic IP routing using a P4 switch.
+- handover – Simulates handover between access points.
 
 ### Requirements
-- Jupyter notebook
-- Mininet-WiFi
-    - If you already have Mininet-WiFi you need to install P4 dependencies with `sudo util/install.sh -P`.
-      - **Note**: As P4 requires many dependencies, if you face problems during the installation you will need to resolve them by yourself. You may want to refer to [https://github.com/jafingerhut/p4-guide](https://github.com/jafingerhut/p4-guide) too.
+To run these scenarios, you need to install Containernet, which includes Mininet-WiFi:
+
+- Containernet: https://github.com/ramonfontes/containernet
     
